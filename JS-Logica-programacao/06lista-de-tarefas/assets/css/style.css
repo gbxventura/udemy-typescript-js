@@ -16,7 +16,7 @@ body {
   font-size: 1.3em;
   line-height: 1.5em;
   display: flex;
-
+  height: 100vh;
   background: radial-gradient(rgb(19, 0, 128), black);
 }
 
@@ -27,4 +27,11 @@ body {
   padding: 20px;
   border-radius: 10px;
   height: auto;
+  transition: all 0.5s;
+  overflow: scroll;
+}
+
+li {
+  list-style: none;
+  font-size: 25px;
 }
