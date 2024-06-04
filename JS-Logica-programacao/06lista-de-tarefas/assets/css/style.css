@@ -1,37 +1,146 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
-/* :root {
-  --primary-color: rgb(17, 86, 102);
-  --primary-color-darker: rgb(9, 48, 56);
-} */
 
 * {
   box-sizing: border-box;
-  outline: 0;
   padding: 0;
   margin: 0;
 }
 
+/* Estilos básicos para o corpo da página */
 body {
   font-family: "Open sans", sans-serif;
   font-size: 1.3em;
   line-height: 1.5em;
   display: flex;
-  height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
   background: radial-gradient(rgb(19, 0, 128), black);
+  padding: 20px;
 }
 
+/* Container principal */
 .container {
   max-width: 640px;
-  margin: 50px auto;
+  width: 100%;
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.5s;
-  overflow: scroll;
 }
 
-li {
+.container p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Input de nova tarefa */
+.input-nova-tarefa {
+  flex: 1;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/* Botão de adicionar tarefa */
+.btn-add-tarefa {
+  padding: 10px 20px;
+  font-size: 1em;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-add-tarefa:hover {
+  background: #0056b3;
+}
+
+/* Lista de tarefas */
+ul.tarefas {
   list-style: none;
-  font-size: 25px;
+  padding: 0;
+}
+
+/* Item da lista de tarefas */
+ul.tarefas li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Botão de apagar */
+ul.tarefas li button {
+  background: #ff5c5c;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul.tarefas li button:hover {
+  background: #ff1c1c;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .container p {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-nova-tarefa {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .btn-add-tarefa {
+    padding: 10px;
+  }
+
+  ul.tarefas li {
+    font-size: 0.9em;
+  }
+
+  ul.tarefas li button {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1em;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .container p {
+    margin-bottom: 15px;
+  }
+
+  .btn-add-tarefa {
+    font-size: 0.9em;
+  }
+
+  ul.tarefas li {
+    padding: 8px;
+  }
 }
