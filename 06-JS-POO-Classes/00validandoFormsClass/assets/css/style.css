@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: "Open sans", sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.container input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.container label {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.container button {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.container button:hover {
+  background-color: var(--primary-color-darker);
+  transform: scale(0.901);
+}
+
+.error-text {
+  font-size: 1rem;
+  color: red;
+}
