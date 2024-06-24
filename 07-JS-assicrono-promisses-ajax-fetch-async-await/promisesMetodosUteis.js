@@ -6,22 +6,27 @@ function rand(min, max) {
 
 function esperaAi(msg, tempo) {
   return new Promise((resolve, reject) => {
-    if (typeof msg !== "string") reject(false);
+    if (typeof msg !== "string") {
+      reject("erro");
+      return;
+    }
 
     setTimeout(() => {
       resolve(msg);
+      return;
     }, tempo);
   });
 }
 
-// Promise.all (passar array com promises)
+// Exemplos
 const promises = [
-  "Primeiro valor",
   esperaAi("Promise 1", 3000),
   esperaAi("Promise 2", 50),
   esperaAi("Promise 3", 1000),
-  "Outro valor",
+  //   esperaAi(1000),
+  //   "Outro valor",
 ];
+// Promise.all (passar array com promises)
 Promise.all(promises)
   .then((valor) => {
     console.log(valor);
@@ -29,6 +34,13 @@ Promise.all(promises)
   .catch((erro) => {
     console.log(erro);
   });
-// Promise.race
+// Promise.race (entrega a primeira que for resolvida, a mais rapida)
+Promise.race(promises)
+  .then((valor) => {
+    console.log(valor);
+  })
+  .catch((erro) => {
+    console.log(erro);
+  });
 // Promise.resolve
 // Promise.reject
