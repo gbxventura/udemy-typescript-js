@@ -9,5 +9,5 @@
 [x] - Seção 05 - JS Objetos e prototypes Avançado<br>
 [x] - Seção 06 - JS Classes - POO<br>
 [x] - Seção 07 - JS assíncrono - Promises, AJax etc<br>
-[x] - Seção 08 JS - Tooling ES6 Modules - Modulos<br>
-[x] - Seção 09 JS <br>
+[x] - Seção 08 - JS Tooling ES6 Modules - Modulos<br>
+[x] - Seção 09 - JS Node, Npm, Express e MongoDB <br>
